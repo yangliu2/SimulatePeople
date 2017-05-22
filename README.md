@@ -1,2 +1,2 @@
-# template
-template for python data science projects
+# Simulate people
+Attempt to simulate people's lives
