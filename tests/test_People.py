@@ -1,7 +1,7 @@
 import unittest
 from src.People import People
 from random import Random
-import mock
+from mock import patch
 
 
 class TestPeople(unittest.TestCase):
@@ -26,7 +26,7 @@ class TestPeople(unittest.TestCase):
         self.assertTrue(self.people.weight)
         self.assertTrue(self.people.lifeSpan)
 
-    @mock.patch('random.randint') # match the random gen
+    @patch('random.randint') # match the random gen
     def test_randomGender(self, random_call):
         random_call.return_value = 0 # just to match the random
         actual = self.people.randomGender() 
